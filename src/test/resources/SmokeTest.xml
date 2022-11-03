@@ -13,8 +13,8 @@
     </test> <!-- Test -->
     <test name="Thread #2">
         <classes>
-            <class name="tests.ProductTest" />
-            <class name="tests.CheckOutTest" />
+            <class name="tests.LoginTest" />
+            <class name="tests.CatalogTest" />
         </classes>
     </test> <!-- Test -->
 </suite>
