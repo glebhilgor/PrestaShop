@@ -35,6 +35,7 @@
                 <artifactId>allure-maven</artifactId>
                 <version>2.11.2</version>
             </plugin>
+
         </plugins>
     </build>
 
@@ -85,6 +86,13 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.19.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.codeborne/selenide -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>6.9.0</version>
+            <scope>test</scope>
         </dependency>
 
         <!--Для считывания yaml-файлов -->
