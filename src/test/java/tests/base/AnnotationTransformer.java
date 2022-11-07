@@ -1,7 +1,8 @@
-package tests;
+package tests.base;
 
 import org.testng.IAnnotationTransformer;
 import org.testng.annotations.ITestAnnotation;
+import tests.base.Retry;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;

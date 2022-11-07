@@ -1,20 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Smoke Test" parallel="classes" thread-count="2">
-    <listeners>
-        <listener class-name="tests.AnnotationTransformer"/>
-        <listener class-name="tests.TestListener"/>
-    </listeners>
-    <test name="Thread #1">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite thread-count="2" name="Test suite" verbose="1" parallel="classes">
+    <test name="CreateAccountTest">
+        <classes>
+            <class name="tests.CreateNewAccountTest"/>
+        </classes>
+    </test>
+    <test name="Create incorrect account">
+        <classes>
+            <class name="tests.CreateIncorrectAccountTest"/>
+        </classes>
+    </test>
+    <test name="LoginPageTest">
         <classes>
             <class name="tests.LoginTest" />
-            <class name="tests.CartTest" />
         </classes>
-    </test> <!-- Test -->
-    <test name="Thread #2">
+    </test>
+    <test name="LoginPageInvalidTest">
         <classes>
-            <class name="tests.LoginTest" />
-            <class name="tests.CatalogTest" />
+            <class name="tests.LoginIncorrectTest" />
         </classes>
-    </test> <!-- Test -->
+    </test>
+    <test name="AddressPageTest">
+        <classes>
+            <class name="tests.AddressTest"/>
+        </classes>
+    </test>
+    <test name="WomenPageTest">
+        <classes>
+            <class name="tests.WomenPageTest"/>
+        </classes>
+    </test>
+    <test name="CheckoutOrderPageTest">
+        <classes>
+            <class name="tests.CheckoutOrderTest"/>
+        </classes>
+    </test>
+
 </suite>

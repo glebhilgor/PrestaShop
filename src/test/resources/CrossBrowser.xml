@@ -2,22 +2,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Smoke Test" parallel="tests" thread-count="2">
     <listeners>
-        <listener class-name="tests.AnnotationTransformer"/>
-        <listener class-name="tests.TestListener"/>
+        <listener class-name="tests.base.AnnotationTransformer"/>
+        <listener class-name="tests.base.TestListener"/>
 
     </listeners>
     <test name="Chrome">
 
         <classes>
             <class name="tests.LoginTest" />
-            <class name="tests.CartTest" />
+            <class name="tests.AddressTest" />
             <parameter name="browser" value="chrome"></parameter>
         </classes>
     </test> <!-- Test -->
     <test name="Thread #2">
         <classes>
             <class name="tests.LoginTest" />
-            <class name="tests.CatalogTest" />
+            <class name="tests.WomenPageTest" />
             <parameter name="browser" value="firefox"></parameter>
         </classes>
     </test> <!-- Test -->
